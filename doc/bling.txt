@@ -1,0 +1,39 @@
+================================================================================
+INTRODUCTION                                                         *bling.txt*
+
+Bling.nvim blinks the current search result after jumping to it after using *,
+#, n or N.
+
+bling.setup({})                                                  *bling.setup()*
+
+    Setup function to initialize the plugin.
+>
+        require('highlight-annotate').setup({})
+<
+    Replace {} with your options. See |bling-opts| for details.
+
+opts                                                                *bling-opts*
+>
+    opts = {
+        -- blink during macros
+        during_macros = false,
+
+        -- number of blinks to perform
+        count         = 3,
+
+        -- delay for each blink
+        delay         = 75,
+
+        map = {
+            -- on which search / repetition to blink
+            asterisk = true,
+            hash     = true,
+            n        = true,
+            N        = true,
+
+            -- blink after searching using / or ?
+            cmd      = false,
+        }
+    }
+<
+================================================================================
